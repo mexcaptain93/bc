@@ -2,6 +2,7 @@ $(function() {
 	datePickerInit();
 	timePickerInit();
 	addLoader();
+	showParking();
 });
 
 function datePickerInit() {
@@ -53,5 +54,16 @@ function addLoader() {
 				$(this).attr('for', $(this).attr('for') + '_' + loaders);
 			});
 		})
+	});
+}
+
+function showParking() {
+	$('input:radio[name="parking"]').on('change', function(e) {
+		if ($(this).val() == 'true') {
+			$('.js-parking').slideDown();
+		}
+		else {
+			$('.js-parking').slideUp();
+		}
 	});
 }
