@@ -127,11 +127,6 @@ body {
   margin-bottom: 20px;
   margin-top: 0;
 }
-.form input[type="time"] {
-  -webkit-border-radius: ;
-     -moz-border-radius: ;
-          border-radius: ;
-}
 .form textarea {
   max-width: 100%;
 }
