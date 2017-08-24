@@ -1,0 +1,52 @@
+.form {
+  h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  input[type="time"] {
+    border-radius:;
+  }
+
+  textarea {
+    max-width: 100%;
+  }
+
+  .visit-time {
+    &__item {
+      display: inline-block;
+      width: 70px;
+      input {
+        text-align: center;
+      }
+      span {
+        display: block;
+        text-align: center;
+      }
+      &:first-child {
+        margin-right: 20px;
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          height: 1px;
+          width: 24px;
+          background-color: #646464;
+          position: absolute;
+          top: 15px;
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  .passport {
+    &__item {
+      display: inline-block;
+      width: 100px;
+      input {
+        text-align: center;
+      }
+    }
+  }
+}

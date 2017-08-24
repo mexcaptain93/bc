@@ -1,5 +1,46 @@
+.form-group.required .control-label:after {
+  content: " *";
+  color: red;
+}
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RobotoLight";
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  font-family: 'RobotoRegular';
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
 .header {
-  padding-top: 20px;
+  padding: 20px 0;
 }
 .header__user {
   margin-bottom: 20px;
@@ -19,22 +60,258 @@
     margin-bottom: 0;
   }
 }
-.auth-form .modal-content {
-  background-color: #393939;
+.left-menu__cat .cat__name a {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 10px 10px 30px;
+}
+.left-menu__cat .cat__list {
+  border-left: 1px solid #646464;
+  padding: 15px;
+  margin-left: 15px;
+}
+.left-menu__cat .cat__list:empty {
+  border-left: none;
+}
+.left-menu__cat .cat__item {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 12px;
+  color: #000;
+  font-weight: 600;
+  border: 1px solid #000;
+}
+.left-menu__cat .cat__item:last-child {
+  margin-bottom: 0;
+}
+.auth {
+  padding: 20px;
 }
 @media screen and (min-width: 768px) {
-  .auth-form .modal-dialog {
+  .auth {
+    padding: 50px;
+  }
+}
+.auth .auth-form {
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .auth .auth-form {
     width: 350px;
   }
 }
-.auth-form label {
+.auth .auth-form .auth-form__content {
+  background-color: #393939;
+  padding: 15px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+.auth .auth-form label {
   color: #fff;
 }
-.auth-form__forget {
+.auth .auth-form__forget {
   color: #fff;
   font-weight: bold;
 }
-.auth-form__btns {
+.auth .auth-form__btns {
   margin-bottom: 15px;
   text-align: left;
+}
+.form h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.form input[type="time"] {
+  -webkit-border-radius: ;
+     -moz-border-radius: ;
+          border-radius: ;
+}
+.form textarea {
+  max-width: 100%;
+}
+.form .visit-time__item {
+  display: inline-block;
+  width: 70px;
+}
+.form .visit-time__item input {
+  text-align: center;
+}
+.form .visit-time__item span {
+  display: block;
+  text-align: center;
+}
+.form .visit-time__item:first-child {
+  margin-right: 20px;
+  position: relative;
+}
+.form .visit-time__item:first-child::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 24px;
+  background-color: #646464;
+  position: absolute;
+  top: 15px;
+  left: 100%;
+}
+.form .passport__item {
+  display: inline-block;
+  width: 100px;
+}
+.form .passport__item input {
+  text-align: center;
+}
+/*!
+ * Timepicker Component for Twitter Bootstrap
+ *
+ * Copyright 2013 Joris de Wit
+ *
+ * Contributors https://github.com/jdewit/bootstrap-timepicker/graphs/contributors
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+.bootstrap-timepicker {
+  position: relative;
+}
+.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:before {
+  left: auto;
+  right: 12px;
+}
+.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:after {
+  left: auto;
+  right: 13px;
+}
+.bootstrap-timepicker .input-group-addon {
+  cursor: pointer;
+}
+.bootstrap-timepicker .input-group-addon i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.bootstrap-timepicker-widget.dropdown-menu {
+  padding: 4px;
+}
+.bootstrap-timepicker-widget.dropdown-menu.open {
+  display: inline-block;
+}
+.bootstrap-timepicker-widget.dropdown-menu:before {
+  border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.bootstrap-timepicker-widget.dropdown-menu:after {
+  border-bottom: 6px solid #FFFFFF;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.bootstrap-timepicker-widget.timepicker-orient-left:before {
+  left: 6px;
+}
+.bootstrap-timepicker-widget.timepicker-orient-left:after {
+  left: 7px;
+}
+.bootstrap-timepicker-widget.timepicker-orient-right:before {
+  right: 6px;
+}
+.bootstrap-timepicker-widget.timepicker-orient-right:after {
+  right: 7px;
+}
+.bootstrap-timepicker-widget.timepicker-orient-top:before {
+  top: -7px;
+}
+.bootstrap-timepicker-widget.timepicker-orient-top:after {
+  top: -6px;
+}
+.bootstrap-timepicker-widget.timepicker-orient-bottom:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid #999;
+}
+.bootstrap-timepicker-widget.timepicker-orient-bottom:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #ffffff;
+}
+.bootstrap-timepicker-widget a.btn,
+.bootstrap-timepicker-widget input {
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+.bootstrap-timepicker-widget table {
+  width: 100%;
+  margin: 0;
+}
+.bootstrap-timepicker-widget table td {
+  text-align: center;
+  height: 30px;
+  margin: 0;
+  padding: 2px;
+}
+.bootstrap-timepicker-widget table td:not(.separator) {
+  min-width: 30px;
+}
+.bootstrap-timepicker-widget table td span {
+  width: 100%;
+}
+.bootstrap-timepicker-widget table td a {
+  border: 1px transparent solid;
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 8px 0;
+  outline: 0;
+  color: #333;
+}
+.bootstrap-timepicker-widget table td a:hover {
+  text-decoration: none;
+  background-color: #eee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-color: #ddd;
+}
+.bootstrap-timepicker-widget table td a i {
+  margin-top: 2px;
+  font-size: 18px;
+}
+.bootstrap-timepicker-widget table td input {
+  width: 25px;
+  margin: 0;
+  text-align: center;
+}
+.bootstrap-timepicker-widget .modal-content {
+  padding: 4px;
+}
+@media (min-width: 767px) {
+  .bootstrap-timepicker-widget.modal {
+    width: 200px;
+    margin-left: -100px;
+  }
+}
+@media (max-width: 767px) {
+  .bootstrap-timepicker {
+    width: 100%;
+  }
+  .bootstrap-timepicker .dropdown-menu {
+    width: 100%;
+  }
 }

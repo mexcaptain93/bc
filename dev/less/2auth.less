@@ -1,0 +1,28 @@
+.auth {
+  padding: 20px;
+  @media screen and (min-width: @tablet) {
+    padding: 50px;
+  }
+  .auth-form {
+    margin: 0 auto;
+    @media screen and (min-width: @tablet) {
+      width: 350px;
+    }
+    .auth-form__content {
+      background-color: @gray_dark;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    label {
+      color: @white;
+    }
+    &__forget {
+      color: @white;
+      font-weight: bold;
+    }
+    &__btns {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,192 @@
+<!doctype html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+
+    <title>Бизнес-центр</title>
+    <meta name="description" content="Sometext">
+    <meta name="author" content="Sometext">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.ru.min.js"></script>
+    <script src="js/bootstrap-timepicker.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-6">
+                <div class="header__user user">
+                    <div class="user__info">
+                        <span class="user__name">Анна Юрьевна Тополева</span> <span class="user__company">(ООО "АВТ")</span>
+                    </div>
+                    <div class="user__links">
+                        <a href="/index.html">Выйти</a> / <a href="#">Изменить профиль</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-6">
+                <div class="header__btns">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <button type="button" class="btn btn-default btn-block">
+                                <span class="glyphicon glyphicon-envelope"></span> Корреспонденция
+                            </button>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <button type="button" class="btn btn-default btn-block">
+                                <span class="glyphicon glyphicon-pencil"></span> Написать управляющему
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3">
+            <div class="left-menu">
+                <div class="left-menu__cat cat">
+                    <div class="cat__name">
+                        <a href="#">Гостевые пропуска</a>
+                    </div>
+                    <div class="cat__list">
+                        <a href="#" class="cat__item">Пропуск на посетителя</a>
+                        <a href="#" class="cat__item">Пропуск на парковку для посетителя</a>
+                        <a href="#" class="cat__item">Заказать пропуск на постоянного гостя</a>
+                    </div>
+                </div>
+                <div class="left-menu__cat cat">
+                    <div class="cat__name">
+                        <a href="#">Постоянные пропуска</a>
+                    </div>
+                    <div class="cat__list">
+                        <a href="#" class="cat__item">Постоянные пропуск на сотрудника</a>
+                        <a href="#" class="cat__item">Заблокировать пропуск</a>
+                    </div>
+                </div>
+                <div class="left-menu__cat cat">
+                    <div class="cat__name">
+                        <a href="#">Отгрузка/погрузка на территории</a>
+                    </div>
+                    <div class="cat__list"></div>
+                </div>
+                <div class="left-menu__cat cat">
+                    <div class="cat__name">
+                        <a href="#">Заявки в службу эксплуатации</a>
+                    </div>
+                    <div class="cat__list">
+                        <a href="#" class="cat__item">Добавить заявку</a>
+                    </div>
+                </div>
+                <div class="left-menu__cat cat">
+                    <div class="cat__name">
+                        <a href="#">Заказ бухгалтерских документов</a>
+                    </div>
+                    <div class="cat__list"></div><!-- Не допускать перевода строки внутри, если пустой! -->
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <div class="form form_2">
+                <h3>Заказать разовый пропуск на парковку для посетителя</h3>
+                <form role="form" class="form-horizontal">
+                    <h4>Внесите данные водителя</h4>
+                    <div class="form-group required">
+                        <label for="form2_field1" class="col-sm-3 control-label">Фамилия</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="form2_field1">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="form2_field2" class="col-sm-3 control-label">Имя</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="form2_field2">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="form2_field3" class="col-sm-3 control-label">Отчество</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="form2_field3">
+                        </div>
+                    </div>
+                    <h4>Внесите данные автомобиля</h4>
+                    <div class="form-group required">
+                        <label for="form2_field4" class="col-sm-3 control-label">Госномер автомобиля</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="form2_field4">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="form2_field5" class="col-sm-3 control-label">Марка автомобиля</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="form2_field5">
+                        </div>
+                    </div>
+                    <h4>Внесите данные о дате и времени визита</h4>
+                    <div class="form-group">
+                        <label for="form2_field6" class="col-sm-3 control-label">Дата визита</label>
+                        <div class="col-sm-9">
+                            <div class="input-group date">
+                                <input type="text" id="form2_field6" class="form-control datepicker"><span
+                                    class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Время парковки</label>
+                        <div class="col-sm-9">
+                            <div class="visit-time">
+                                <div class="visit-time__item">
+                                    <input type="text" id="form2_field7" class="form-control timepicker">
+                                    <span>От</span>
+                                </div>
+                                <div class="visit-time__item">
+                                    <input type="text" id="form2_field8" class="form-control timepicker">
+                                    <span>До</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div class="alert alert-info">
+                                Заказ парковки возможен только с 08:00 до 20:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form2_field9" class="col-sm-3 control-label">Комментарий к заявке</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="3" id="form2_field9"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="button" class="btn btn-primary btn-success">Отправить <span
+                                    class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
