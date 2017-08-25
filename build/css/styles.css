@@ -142,6 +142,9 @@ body {
           box-shadow: none;
   outline: none;
 }
+.form input[type="file"] {
+  outline: none;
+}
 .form .radio_inline {
   display: inline-block;
   margin-right: 20px;
@@ -216,6 +219,9 @@ body {
   }
 }
 .form .parking {
+  display: none;
+}
+.form .docparams {
   display: none;
 }
 /*!

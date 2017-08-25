@@ -3,6 +3,7 @@ $(function() {
 	timePickerInit();
 	addLoader();
 	showParking();
+	showDocumentParams();
 });
 
 function datePickerInit() {
@@ -30,12 +31,12 @@ function timePickerInit() {
 		minuteStep: 5,
 		showInputs: true,
 	}).on('changeTime.timepicker', function(e) {
-		var h  = e.time.hours;
-		var m  = e.time.minutes;
-		if (h*60+m  < 480) {
+		var h = e.time.hours;
+		var m = e.time.minutes;
+		if (h * 60 + m < 480) {
 			$(this).timepicker('setTime', '08:00');
 		}
-		if (h*60+m > 1200) {
+		if (h * 60 + m > 1200) {
 			$(this).timepicker('setTime', '20:00');
 		}
 	});
@@ -65,5 +66,14 @@ function showParking() {
 		else {
 			$('.js-parking').slideUp();
 		}
+	});
+}
+
+function showDocumentParams() {
+	$('input:radio[name="docType"]').on('change', function(e) {
+		if ($(this).is(':checked')) {
+			$('.js-docparams').slideDown();
+		}
+
 	});
 }
