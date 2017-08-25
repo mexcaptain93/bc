@@ -103,49 +103,97 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-9">
-            <div class="form form_6">
-                <h3>Заявка на блокировку пропуска</h3>
-                <form role="form" class="form-horizontal">
-                    <div class="form-group required">
-                        <label for="form6_field1" class="col-sm-3 control-label">Тема</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="form6_field1" value="Блокировка пропуска">
+            <div class="notifications">
+                <ul class="notifications__types row nav nav-pills">
+                    <li class="active col-xs-12 col-sm-4">
+                        <a href="#send" data-toggle="tab"><span>Отправить уведомление</span></a>
+                    </li>
+                    <li class="col-xs-12 col-sm-4">
+                        <a href="#list" data-toggle="tab"><span>Список уведомлений</span></a>
+                    </li>
+                    <li class="col-xs-12 col-sm-4">
+                        <a href="#archive" data-toggle="tab"><span>Архив уведомлений</span></a>
+                    </li>
+                </ul>
+
+
+                <div class="notifications__content content tab-content clearfix">
+                    <div class="content__pass tab-pane active" id="send">
+                        Отправить уведомление
+                    </div>
+                    <div class="content__parking tab-pane" id="list">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <th>Дата уведомления</th>
+                                    <th>От кого</th>
+                                </thead>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                </tr>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                </tr>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                </tr>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                </tr>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                </tr>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
-                    <div class="form-group required">
-                        <label for="form6_field2" class="col-sm-3 control-label">Фамилия</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control typeahead js-typeahead-firstname" id="form6_field2">
+                    <div class="content__parking tab-pane" id="archive">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <th>Дата отправки</th>
+                                    <th>В компанию</th>
+                                    <th>Когда забрали</th>
+                                    <th>Кто забрал</th>
+                                </thead>
+                                <tr>
+                                    <td>23.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                    <td>24.08.2017</td>
+                                    <td>Заберушин Павел Сергеевич</td>
+                                </tr>
+                                <tr>
+                                    <td>24.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                    <td>24.08.2017</td>
+                                    <td>Заберушин Павел Сергеевич</td>
+                                </tr>
+                                <tr>
+                                    <td>24.08.2017</td>
+                                    <td>Компания "Аэрофлот"</td>
+                                    <td>24.08.2017</td>
+                                    <td>Заберушин Павел Сергеевич</td>
+                                </tr>
+
+                            </table>
                         </div>
                     </div>
-                    <div class="form-group required">
-                        <label for="form6_field3" class="col-sm-3 control-label">Имя</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="form6_field3">
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label for="form6_field4" class="col-sm-3 control-label">Отчество</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="form6_field4">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="form6_field5" class="col-sm-3 control-label">Причина блокировки</label>
-                        <div class="col-sm-9">
-                            <textarea class="form-control" rows="3" id="form6_field5"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
-                            <button type="button" class="btn btn-primary btn-success">Отправить <span
-                                    class="glyphicon glyphicon-send"></span></button>
-                        </div>
-                    </div>
-                </form>
+
+                </div>
+
+
             </div>
         </div>
     </div>
+</div>
 </div>
 
 </body>

@@ -4,6 +4,8 @@ $(function() {
 	addLoader();
 	showParking();
 	showDocumentParams();
+	typeaheadFirstname();
+	typeaheadNum();
 });
 
 function datePickerInit() {
@@ -76,4 +78,53 @@ function showDocumentParams() {
 		}
 
 	});
+}
+
+var substringMatcher = function(strs) {
+	return function findMatches(q, cb) {
+		var matches, substrRegex;
+
+		// an array that will be populated with substring matches
+		matches = [];
+
+		// regex used to determine if a string contains the substring `q`
+		substrRegex = new RegExp(q, 'i');
+
+		// iterate through the pool of strings and for any string that
+		// contains the substring `q`, add it to the `matches` array
+		$.each(strs, function(i, str) {
+			if (substrRegex.test(str)) {
+				matches.push(str);
+			}
+		});
+
+		cb(matches);
+	};
+};
+
+function typeaheadFirstname() {
+	var firstnames = ['Иванов', 'Петров', 'Сидоров', 'Андреев', 'Аннин'];
+
+	$('.js-typeahead-firstname').typeahead({
+			hint: true,
+			highlight: true,
+			minLength: 1
+		},
+		{
+			name: 'firstnames',
+			source: substringMatcher(firstnames)
+		});
+}
+function typeaheadNum() {
+	var numbers = ['О111ОН77', 'А111МР00', 'К469ЕК123', 'В111ОР777'];
+
+	$('.js-typeahead-number').typeahead({
+			hint: true,
+			highlight: true,
+			minLength: 1
+		},
+		{
+			name: 'numbers',
+			source: substringMatcher(numbers)
+		});
 }
