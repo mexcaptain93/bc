@@ -1,0 +1,67 @@
+.requests {
+
+
+  .nav-pills {
+    & > li+li {
+      margin-left: 0;
+    }
+    & > li > a {
+      display: table;
+      padding: 0;
+    }
+    &>li.active>a {
+      background-color: @gray;
+      color: @black;
+    }
+  }
+
+  &__types {
+    margin-bottom: 20px;
+    @media screen and (min-width: @tablet) {
+      margin-bottom: 40px;
+    }
+    a {
+      display: table;
+      width: 100%;
+      background-color: @white;
+      border: 1px solid @gray;
+      color: @black;
+      height: 42px;
+      text-align: center;
+      text-decoration: none;
+      & > span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      &:hover {
+        background-color: @gray;
+        border-color: @gray_dark;
+      }
+    }
+  }
+
+  &__content {
+    .table {
+      thead {
+        th {
+          background-color: @gray_dark2;
+          color: @white;
+          text-align: center;
+        }
+      }
+      td {
+        text-align: center;
+      }
+    }
+
+    .green-text {
+      color: @green;
+    }
+    .red-text {
+      color: @red;
+    }
+    .blue-text {
+      color: @blue;
+    }
+  }
+}

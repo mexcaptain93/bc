@@ -69,7 +69,7 @@ body {
   padding: 10px 10px 10px 30px;
 }
 .left-menu__cat .cat__list {
-  border-left: 1px solid #646464;
+  border-left: 1px solid #ccc;
   padding: 15px;
   margin-left: 15px;
 }
@@ -105,7 +105,7 @@ body {
   }
 }
 .auth .auth-form .auth-form__content {
-  background-color: #393939;
+  background-color: #adadad;
   padding: 15px;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
@@ -223,6 +223,60 @@ body {
 }
 .form .docparams {
   display: none;
+}
+.requests .nav-pills > li + li {
+  margin-left: 0;
+}
+.requests .nav-pills > li > a {
+  display: table;
+  padding: 0;
+}
+.requests .nav-pills > li.active > a {
+  background-color: #ccc;
+  color: #000;
+}
+.requests__types {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .requests__types {
+    margin-bottom: 40px;
+  }
+}
+.requests__types a {
+  display: table;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  height: 42px;
+  text-align: center;
+  text-decoration: none;
+}
+.requests__types a > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.requests__types a:hover {
+  background-color: #ccc;
+  border-color: #adadad;
+}
+.requests__content .table thead th {
+  background-color: #636363;
+  color: #fff;
+  text-align: center;
+}
+.requests__content .table td {
+  text-align: center;
+}
+.requests__content .green-text {
+  color: #0ca816;
+}
+.requests__content .red-text {
+  color: #a20000;
+}
+.requests__content .blue-text {
+  color: #000097;
 }
 /*!
  * Timepicker Component for Twitter Bootstrap
